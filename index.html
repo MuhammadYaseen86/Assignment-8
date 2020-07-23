@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Assignment 1 to 67</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<style>
+        table { width: 70%; }
+        table, th, td { border: solid 1px #DDD;
+            border-collapse: collapse; padding: 2px 3px; text-align: center;
+        }
+    </style>	
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>Assignment 8</h1> <hr>
+			<p>Click the button to display the result</p>
+			<h2 id="result">Result of Power</h2>
+			<button type="button" class="btn btn-primary" onclick="myFunction();">Try it</button>
+
+			<h2>Leap Year</h2>
+			Input Year: <input type="text" id="year"/> 
+		    <input type="button" id="button" onclick="isLeapYear()" value="Check Leap Year"> 
+		    <h2 id="GFG"></h2> 
+		    <h2>Area of Traiangle is:<span id="traingle-area"></span></h2>
+		    <h2>Your Percentage is:<span id="percentage"></span></h2> 
+		    <h2>Your Subject Average is:<span id="avg"></span></h2> 
+		    <hr>
+		    <button type="button" class="btn btn-primary" onclick="myFunction()">Try it</button>
+			<h2><span id="demo"></span></h2>
+			<hr>
+			<h2>Before Remove Text: <span>bongo drums guitar flute double bass xylophone piano"</span></h2>
+			<h2>After Remove Vowels: <span id="remove_vowel"></span></h2>
+			<hr>
+			<h2> Occurrences: <span id="occurrences_number"></span></h2>
+			<hr>
+			<div class="city-container">
+				<label>Karachi</label>
+				<input type="text" name="city_1" id="city_1">
+				<span>To</span>
+				<input type="text" name="city_2" id="city_2">
+				<label>Lahore</label>
+			</div>
+			<hr>
+			<input type="number" id="time_work" placeholder="Enter you work hours">
+			<button id="submit" onclick="overtime()">Submit</button> 
+			<h2>Your OverTime Payment is: <strong id="overtimepayment"></strong> and your work hours is <strong id="workhours"></strong></h2>
+			<hr>
+			<input type="text" id="amt"/><input type="button" value="change" id="btn"/>
+			<br/>
+			Hundreds: <strong><span class="curreny"></span></strong><br/>
+			Fifties: <strong><span class="curreny"></span></strong><br/>
+			Tens: <strong><span class="curreny"></span><br/>
+			<hr>
+			<div class="row">
+				<div class="col-md-4 img-col">
+					<img src="assets/img/mobile-1.jpg" width="300px">
+				</div>
+				<div class="col-md-4 img-col">
+					<img src="assets/img/mobile-2.jpg" width="300px">
+				</div>
+				<div class="col-md-4 img-col">
+					<img src="assets/img/mobile-3.png" width="300px">
+				</div>
+			</div>
+		    <hr>
+		    <div id="table">
+			  	<table border="1" class="usertable">
+				    <tr>
+				      <th>#</th>
+				      <th>Names</th>
+				      <th>Class</th>
+				      <th>Action</th>
+				      <th>Edit</th>
+				    </tr>
+				    <tr>
+				      <td class="index"></td>
+				      <td id="naam"></td>
+				      <td id="class"></td>
+				      <td><button class="delete">Delete</button></td>
+				      <td><button class="edit">edit</button></td>
+				    </tr>
+				    <tr>
+				      <td></td>
+				      <td></td>
+				      <td></td>
+				      <td><button class="delete">Delete</button></td>
+				      <td><button class="edit">edit</button></td>
+				    </tr>
+				    <tr>
+				      <td></td>
+				      <td></td>
+				      <td></td>
+				      <td><button class="delete">Delete</button></td>
+				      <td><button class="edit">edit</button></td>
+				    </tr>
+				    <tr>
+				      <td></td>
+				      <td></td>
+				      <td></td>
+				      <td><button class="delete">Delete</button></td>
+				      <td><button class="edit">edit</button></td>
+				    </tr>
+			  	</table>
+			</div>
+
+			<table border="1" class="edittable" style="display: none;">
+				<tbody>
+					<tr>
+				      <th>#</th>
+				      <th>Names</th>
+				      <th>Class</th>
+				      <th>Action</th>
+				      <th>Edit</th>
+				    </tr>
+				    <tr>
+				      <td class="index">0</td>
+				      <td id="naam">John</td>
+				      <td id="class">2</td>
+				      <td><button class="delete">Delete</button></td>
+				      <td><button class="edit">edit</button></td>
+				    </tr>
+				    <tr>
+				      <td>1</td>
+				      <td>Jack</td>
+				      <td>5</td>
+				      <td><button class="delete">Delete</button></td>
+				      <td><button class="edit">edit</button></td>
+				    </tr>
+				    <tr>
+				      <td>2</td>
+				      <td>DSon</td>
+				      <td>8</td>
+				      <td><button class="delete">Delete</button></td>
+				      <td><button class="edit">edit</button></td>
+				    </tr>
+				    <tr>
+				      <td>3</td>
+				      <td>Dack</td>
+				      <td>2</td>
+				      <td><button class="delete">Delete</button></td>
+				      <td><button class="edit">edit</button></td>
+				    </tr>
+			  	</tbody>
+			  </table>
+
+			<hr>
+			<img id="img-1" onmouseover="setNewImage();" onmouseout= "setOldImage();" src="assets/img/mobile-1.jpg" width="200">
+			<hr>
+			<form>
+			   <input type="text" id="number" value="0"/>
+			   <input type="button" onclick="incrementValue()" value="Increment Value" />
+			   <input type="text" id="number2" value="0"/>
+			   
+			   <input type="button" onclick="decrementValue()" value="decrement Value" />
+			</form>
+			<hr>
+			<form action="#">
+				<h2>Javascript Registration Form</h2>
+				<label>Name :</label>
+				<input id="name" name="name" placeholder="Name" type="text">
+				<label>Email :</label>
+				<input id="reg-email" name="email" placeholder="Email" type="text">
+				<input type="submit" value="Submit" onclick="singupForm();">
+			</form>
+			<h2>User Registerion Data</h2>
+			<h2>Name: <span id="registername"></span></h2>
+			<h2>Email: <span id="registeremail"></span></h2>
+			
+			<hr>
+			<h2>Read More Read Less Button</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas vitae scel<span id="dots">...</span><span id="more">erisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta.</span></p>
+			<button onclick="readMore()" id="myBtn">Read more</button>
+			<hr>
+
+			<h2>Modal</h2>
+			<!-- Trigger/Open The Modal -->
+				<button id="myBtn">Open Modal</button>
+
+				<!-- The Modal -->
+				<div id="myModal" class="modal">
+				  <!-- Modal content -->
+				  <div class="modal-content">
+				    <span class="close">&times;</span>
+				    <p>Some text in the Modal..</p>
+				  </div>
+			</div>
+
+			<div id="imageContainer"></div>
+			<hr>
+			<div><h1>DOM</h1><div id="form-content" class="content"><label for="first-name">First Name</label><input type="text" id="first-name" value=""/><label for="last-name">Last Name</label><input type="text" id="last-name" value=""/><label for="email">Email</label><input type="text" id="email" value=""/></div><div id="main-content" class="content"><p class="render">FirstName:Alex</p><p class="render" id="lastName">LastName:Bank</p><p class="render"> Email : alexbank@example.com</p><p class="render">Country:Pakistan </p><p class="render"> contact : +92 300 1234567</p></div></div>
+			<p id="domdata"></p>
+			<p id="renderclassdata"></p>
+			<div style="height: 200px;"></div>
+
+		</div>
+	</div>
+ 	<script src="assets/js/app.js"></script>
+</body>
+</html>
